@@ -1,0 +1,12 @@
+.hidden-until-focused {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.hidden-until-focused:focus {
+  background-color: #ffffff;
+  width: unset;
+  height: unset;
+}
