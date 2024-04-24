@@ -1,3 +1,77 @@
+
+*{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
+
+:root{
+--primary: #66ADD9;
+--secondary: #66D9BA;
+--accent:  #6866D9;
+--main-max-width: 600px;
+--white: #ffffff;
+
+}
+
+.text-input{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 400px;
+}
+
+form button {
+  max-width: 100px;
+}
+
+form textarea{
+  resize: none;
+}
+
+form{
+  display: grid;
+  background-color: var(--white);
+  border-radius: 10px;
+  max-width: var(--main-max-width);
+  margin-top: 40px;
+  padding: 1rem;
+}
+
+article{
+  padding: 2rem;
+  background-color: var(--white);
+  max-width: var(--main-max-width);
+  border-radius:10px ;
+}
+
+
+main{
+  margin: 3rem;
+  justify-self: center;
+}
+
+body{
+  background-color: var(--primary);
+  margin: 0;
+  display: grid;
+}
+
+h1,h2{
+  background-color: var(--secondary);
+  max-width: var(--main-max-width);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-radius: 15px;
+}
+
+article img{
+  float: right;
+  margin-left: 1rem;
+  max-width: 100%;
+}
+
 .hidden-until-focused {
   position: absolute;
   width: 0;
@@ -9,4 +83,83 @@
   background-color: #ffffff;
   width: unset;
   height: unset;
+}
+
+nav{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 2s;
+}
+
+nav a:hover{
+  color: grey;
+  text-decoration: underline;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  display: grid;
+  background-color: var(--accent);
+  grid-template-columns: 3fr 1fr;
+  align-items: end;
+}
+
+footer{
+  background-color: var(--accent);
+  
+}
+
+
+
+.logo:hover{
+  animation-name: logo-anim;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes logo-anim{
+  from{
+    rotate: 0;
+  }
+
+  to{
+    rotate: 360deg;
+    
+  }
+}
+
+.logo{
+  width: 7rem;
+  background-color: var(--secondary);
+  font-size: 2rem;
+
+}
+
+@media (max-width:480px ) {
+  main {
+    margin: .5rem;
+  }
+
+  article {
+    padding: 1rem;
+
+  }
+
+  header{
+    grid-template-columns: 1fr 2fr;
+    
+  }
+
+  .logo{
+    font-size: 1rem;
+    width: 5rem;
+  }
 }

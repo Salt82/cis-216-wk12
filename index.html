@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="script.js" defer> </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
@@ -59,8 +60,11 @@
       </article>
       <form>
         <h2>Comment</h2>
-        <label for="comment-name">Your name</label
-        ><input id="comment-name" placeholder="Full Name" />
+        <div><label for="comment-name">Your name</label> 
+          <input id="comment-name" placeholder="Full Name" />
+          </div>
+        <button id="comment-submit" type="submit">Post</button>
+        </div>
         <textarea></textarea>
         <button type="submit">Post</button>
       </form>
